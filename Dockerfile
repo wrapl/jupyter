@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN apt-get clean
 
-RUN pip3 install notebook jupyterthemes
+RUN pip3 install notebook jupyterthemes 'tornado<6'
 
 RUN jt -t grade3 -f firacode -fs 10 -nfs 10 -tfs 10 -ofs 10 -cellw 90% -T -N
 
